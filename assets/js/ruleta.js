@@ -33,6 +33,10 @@ const colores = [
     "morado"
 ]
 
+const participantesBackUp = [
+
+];
+
 function lanzarRuleta(min, max) {
     const numeroAleatorio = Math.random() // entre 0 y <1
 
@@ -42,8 +46,24 @@ function lanzarRuleta(min, max) {
 }
 
 function aleatorioDesdeArreglo(arreglo) {
+    if (arreglo.length === 0) {
+
+        return("Ya Participaron Todos!!")
+
+        setTimeout(() => window.location.reload(), 3000)
+
+        return
+
+    }
+    
     const index = lanzarRuleta(0, arreglo.length - 1)
     const elementoArreglo = arreglo[index]
+
+    participantes.splice(participantes.indexOf(elementoArreglo), 1)
+    participantesBackUp.push(elementoArreglo)
+    
+    console.log("faltan " + participantes)
+    console.log(participantesBackUp)
 
     return elementoArreglo
 }
@@ -57,6 +77,10 @@ function renderizarResultado(idElement, texto) {
 const getRandomButton = document.querySelector("#getRandom")
 
 getRandomButton.addEventListener("click", () => {
-    const resultado = aleatorioDesdeArreglo(participantes)  
+    const resultado = aleatorioDesdeArreglo(participantes)
     renderizarResultado("resultado", resultado)
-})
+}
+)
+
+// participantes.splice(index)
+// window.location.reload()
