@@ -48,20 +48,20 @@ function lanzarRuleta(min, max) {
 function aleatorioDesdeArreglo(arreglo) {
     if (arreglo.length === 0) {
 
-        return("Ya Participaron Todos!!")
+        return ("Ya Participaron Todos!!")
 
         setTimeout(() => window.location.reload(), 3000)
 
         return
 
     }
-    
+
     const index = lanzarRuleta(0, arreglo.length - 1)
     const elementoArreglo = arreglo[index]
 
     participantes.splice(participantes.indexOf(elementoArreglo), 1)
     participantesBackUp.push(elementoArreglo)
-    
+
     console.log("faltan " + participantes)
     console.log(participantesBackUp)
 

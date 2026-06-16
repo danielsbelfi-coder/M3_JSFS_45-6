@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <main class="container">
+        <section class="row">
+            <div class="col">
+                <h1 id="mascota-nombre">Mi mascota</h1>
+                <p id="mascota-tipo">Tipo mascota</p>
+            </div>
+        </section>
+        <section class="row justify-content-center">
+            <img id="mascota-img" src="./assets/img/mascota-default.jpg" alt="visualizacion de mascota" style="width: 500px;">
+        </section>
+        <section class="row">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Status</h5>
+                        <div class="progress mb-3" role="progressbar" aria-label="barra de nivel de saciedad" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100">
+                            <div id="mascota-saciedad" class="progress-bar bg-warning" style="width: 25%">Saciedad: 25%</div>
+                        </div>
+                        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100">
+                            <div id="mascota-energia" class="progress-bar bg-info" style="width: 25%">Energia: 25%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <button id="btn-comer" type="button" class="btn btn-warning w-100 h-100">Comer</button>
+            </div>
+            <div class="col-3">
+                <button id="btn-jugar" type="button" class="btn btn-success w-100 h-100">Jugar</button>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/mascota.js"></script>
+</body>
+
+</html>
